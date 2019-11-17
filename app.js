@@ -13,6 +13,7 @@ app.get("/sobre", function(req, res){
     res.render("elements")
 });
 
-app.listen(3000, function(){
-    console.log("servidor pront")
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log('Nosso app esta rodando na porta ${PORT}')
 })
